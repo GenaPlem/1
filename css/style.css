@@ -1,0 +1,335 @@
+@font-face {
+    font-family: "gilroy";
+    src: url("../fonts/gilroy-black-webfont.woff2") format("woff2"),
+         url("../fonts/gilroy-black-webfont.woff") format("woff");
+    font-weight: 900;
+    font-style: normal;
+}
+@font-face {
+    font-family: "gilroy";
+    src: url("../fonts/gilroy-blackitalic-webfont.woff2") format("woff2"),
+         url("../fonts/gilroy-blackitalic-webfont.woff") format("woff");
+    font-weight: 900;
+    font-style: italic;
+}
+@font-face {
+    font-family: "gilroy";
+    src: url("../fonts/gilroy-bold-webfont.woff2") format("woff2"),
+         url("../fonts/gilroy-bold-webfont.woff") format("woff");
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: "gilroy";
+    src: url("../fonts/gilroy-bolditalic-webfont.woff2") format("woff2"),
+         url("../fonts/gilroy-bolditalic-webfont.woff") format("woff");
+    font-weight: bold;
+    font-style: italic;
+}
+@font-face {
+    font-family: "gilroy";
+    src: url("../fonts/gilroy-medium-webfont.woff2") format("woff2"),
+         url("../fonts/gilroy-medium-webfont.woff") format("woff");
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: "gilroy";
+    src: url("../fonts/gilroy-mediumitalic-webfont.woff2") format("woff2"),
+         url("../fonts/gilroy-mediumitalic-webfont.woff") format("woff");
+    font-weight: 500;
+    font-style: italic;
+}
+
+:root {
+    --brown: #0B1D26;
+    --white: #ffffff;
+    --yellow: #FBD784;
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.body {
+    font-family: "gilroy", "Arial", sans-serif;
+    font-weight: bold;
+    font-style: normal;
+    background-image: url(../img/bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center 0;
+    background-color: var(--brown);
+}
+
+.container {
+    max-width: 1230px;
+    min-width: 991px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.container_big {
+    max-width: 1790px;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.img-responsive {
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 65px 0 0;
+}
+
+.header a {
+    color: var(--white);
+}
+
+.header__menu-list {
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+.header__menu-list a {
+    margin: 0 20px;
+}
+
+.logo img {
+    display: block;
+}
+
+.header__acc {
+    display: flex;
+    align-items: center;
+}
+
+.header__acc svg {
+    margin-right: 10px;
+}
+
+.navbar {
+    position: fixed;
+    top: 326px;
+    right: 80px;
+}
+
+.navbar__menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0;
+}
+
+.navbar__menu a {
+    font-size: 18px;
+    line-height: 22px;
+    text-align: right;
+    color: var(--white);
+    padding: 19px 32px 19px 0;
+    display: flex;
+    justify-content: flex-end;
+    border-right: 3px solid rgba(255, 255, 255, 0.1);
+}
+
+.navbar__menu a:hover {
+    color: var(--yellow);
+    border-right: 3px solid var(--white);
+}
+
+.guide {
+    max-width: 950px;
+    margin: 182px auto 759px;
+}
+
+.before {
+    font-weight: 900;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    color: var(--yellow);
+    display: flex;
+    align-items: center;
+}
+
+.before::before {
+    content: "";
+    display: inline-flex;
+    width: 72px;
+    height: 2px;
+    background-color: var(--yellow);
+    margin-right: 32px;
+}
+
+.guide__title {
+    font-family: "Times New Roman";
+    font-weight: bold;
+    text-transform: capitalize;
+    font-size: 88px;
+    line-height: 100px;
+    color: var(--white);
+    padding-top: 50px;
+}
+
+.guide__scroll {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
+    color: var(--white);
+    display: inline-flex;
+    margin-top: 40px;
+}
+
+.guide__scroll svg {
+    margin-left: 16px;
+}
+
+.article {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 100px 0;
+    color: var(--white);
+}
+
+.article:nth-child(odd) {
+    flex-direction: row-reverse;
+}
+
+.article__title {
+    font-family: Times New Roman;
+    font-weight: bold;
+    font-size: 64px;
+    line-height: 74px;
+    padding-top: 30px;
+}
+
+.article__par {
+    font-size: 18px;
+    line-height: 32px;
+    padding: 30px 0;
+}
+
+.article-info {
+    max-width: 584px;
+    position: relative;
+}
+
+.article__number {
+    position: absolute;
+    left: -60px;
+    top: -106px;
+    font-size: 240px;
+    line-height: 240px;
+    color: rgba(255, 255, 255, 0.1);
+}
+
+.article__link {
+    font-size: 18px;
+    line-height: 22px;
+    color: var(--yellow);
+    display: inline-flex;
+    align-items: center;
+    
+}
+
+.article__link svg {
+    margin-left: 16px;
+}
+
+.article__link:hover svg {
+    margin-left: 21px;
+}
+
+.article__pic img {
+    max-width: 100%;
+    height: 720px;
+    display: block;
+    object-fit: cover;
+}
+
+.footer {
+    margin: 100px 0 52px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.footer-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.footer-info a {
+    display: inline-block;
+}
+
+.footer-info__p {
+    font-size: 18px;
+    line-height: 32px;
+    color: var(--white);
+    max-width: 339px;
+    padding: 32px 0 190px;
+}
+
+.footer-info__copyright {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 32px;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.footer-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.footer-nav__p {
+    font-size: 24px;
+    line-height: 32px;
+    color: var(--yellow);
+    padding-bottom: 24px;
+}
+
+.footer-nav a {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 32px;
+    color: var(--white);
+    display: inline-block;
+    margin-bottom: 16px;
+}
+
+a:hover {
+    color: var(--yellow);
+}
+
+.header__acc:hover path {
+    fill: var(--yellow);
+}
+
+.guide__scroll:hover path {
+    fill: var(--yellow);
+}

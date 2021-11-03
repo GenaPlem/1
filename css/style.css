@@ -45,6 +45,7 @@
     --brown: #0B1D26;
     --white: #ffffff;
     --yellow: #FBD784;
+    --trans: rgba(255, 255, 255, 0.1);
 }
 
 * {
@@ -148,7 +149,7 @@ a {
     padding: 19px 32px 19px 0;
     display: flex;
     justify-content: flex-end;
-    border-right: 3px solid rgba(255, 255, 255, 0.1);
+    border-right: 3px solid var(--trans);
 }
 
 .navbar__menu a:hover {
@@ -241,7 +242,7 @@ a {
     top: -106px;
     font-size: 240px;
     line-height: 240px;
-    color: rgba(255, 255, 255, 0.1);
+    color: var(--trans);
 }
 
 .article__link {
